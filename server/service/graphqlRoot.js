@@ -7,8 +7,8 @@ const root = {
         return await User.find();;
     },
 
-    getUserById: async (id) => {
-        return await User.findById(id);
+    getUserByName: async (name) => {
+        return await User.findOne({name});
     },
 
     createUser: async(input) => {
@@ -22,7 +22,7 @@ const root = {
 
         const user = new User({
             name: input.input.name,
-            lastname: input.input?.name,
+            lastname: input.input?.lastname,
 
             posts: [{id: post.id, title: post.title}],
             id});

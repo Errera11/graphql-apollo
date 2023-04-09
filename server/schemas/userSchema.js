@@ -27,13 +27,12 @@ module.exports = buildSchema(`
     }
     
     type Query {
-        getUserById(id: ID): User
+        getUserByName(name: String): User
         getAllUsers: [User]
     }
     
     type Mutation { 
         createUser(input: UserInput): User
-        
     }
 
 `);
