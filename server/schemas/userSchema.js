@@ -2,7 +2,7 @@ const {buildSchema} = require('graphql');
 
 module.exports = buildSchema(`
     type User {
-        id: ID
+        _id: ID
         name: String
         lastname: String
         posts: [Post]
@@ -21,7 +21,7 @@ module.exports = buildSchema(`
     }
     
     input PostInput {
-        id: ID
+        id: Int
         title: String!
         description: String
     }
